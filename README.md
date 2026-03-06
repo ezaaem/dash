@@ -23,6 +23,7 @@ Responsive admin dashboard built with Next.js App Router, React, Tailwind CSS, a
   - Clients: pie chart by country + add/delete + exports
   - Sales: revenue line + orders bar charts
   - Orders: status filter + add/delete + exports
+  - Settings: profile edit (name/email) and overview stats (counts)
 
 ## Tech Stack
 
@@ -48,6 +49,7 @@ Responsive admin dashboard built with Next.js App Router, React, Tailwind CSS, a
   - mock.ts – mocked data and login
   - export.ts – reusable PDF/XLSX helpers
 - middleware.ts – cookie-based route protection
+  - Protects dashboard, products, clients, sales, orders, settings; allows /login
 
 ## Auth Flow
 
@@ -59,6 +61,13 @@ Responsive admin dashboard built with Next.js App Router, React, Tailwind CSS, a
 - Shell visibility:
   - Hidden on /login and when authToken is absent
   - Visible for authenticated routes
+
+## Settings Page
+
+- Route: /settings
+- Shows profile fields (name, email) from Redux auth state
+- Allows editing name/email with instant Redux update
+- Overview panel shows counts for products, clients, and orders
 
 ## Local Development (Node)
 
